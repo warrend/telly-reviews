@@ -46,7 +46,12 @@ class TellyReviews::CLI
     puts "#{review.date}"
     puts "Twitter: #{review.author_twitter}"
     puts "---------------------------------"
-    puts "#{review.body}"
+    
+    review.body.each do |p|
+      puts p.css(".p1 .s1").text
+      puts "\n"
+    end
+
     puts ""
     puts "---------------------------------"
   end

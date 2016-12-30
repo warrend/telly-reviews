@@ -18,10 +18,10 @@ class TellyReviews::Review
     doc = Nokogiri::HTML(open(self.url))
 
     @date = doc.css(".article-body .abstract .timestamp").text
-    @body = doc.css(".article-body .variety-content-wrapper")
     @author_twitter = doc.css(".byline .author .url a").text
     @tag = doc.css(".abstract h2").text
-    #@author = doc.css(".byline .author").text
+
+    @body = doc.css(".article-body .variety-content-wrapper")
   end
 
   def self.find(index)
