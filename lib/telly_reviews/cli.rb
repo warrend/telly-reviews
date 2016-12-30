@@ -1,7 +1,9 @@
 class TellyReviews::CLI
 
   def call
+    puts ""
     puts "Welcome to Telly Reviews"
+    puts "---------------------------------"
     TellyReviews::Scraper.make_list
     start
   end
@@ -37,13 +39,15 @@ class TellyReviews::CLI
   end
 
   def print_details(review)
+    puts "---------------------------------"
     puts "#{review.title}"
     puts ""
     puts "By #{review.author}"
     puts "#{review.date}"
     puts "Twitter: #{review.author_twitter}"
-    puts ""
+    puts "---------------------------------"
     puts "#{review.body}"
     puts ""
+    puts "---------------------------------"
   end
 end

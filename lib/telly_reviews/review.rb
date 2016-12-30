@@ -21,7 +21,7 @@ class TellyReviews::Review
     @body = doc.css(".article-body .variety-content-wrapper")
     @author_twitter = doc.css(".byline .author .url a").text
     @tag = doc.css(".abstract h2").text
-    @author = doc.css(".byline .author").text
+    #@author = doc.css(".byline .author").text
   end
 
   def self.find(index)
