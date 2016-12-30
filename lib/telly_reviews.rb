@@ -1,4 +1,5 @@
+require_relative '../config/environment'
+
 module TellyReviews
 end
 
-require_relative '../config/enviroment'

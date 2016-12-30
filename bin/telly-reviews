@@ -2,4 +2,4 @@
 
 require_relative '../lib/telly_reviews'
 
-#TellyReviews::CLI.new.call
+TellyReviews::CLI.new.call
