@@ -1,0 +1,3 @@
+class TellyReviews::CLI
+
+end

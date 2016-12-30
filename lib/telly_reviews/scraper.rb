@@ -1,0 +1,3 @@
+class TellyReviews::Scraper 
+  
+end
