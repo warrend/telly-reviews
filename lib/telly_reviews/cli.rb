@@ -38,6 +38,13 @@ class TellyReviews::CLI
     print_details(review)
   end
 
+  def print_paragraphs(review)
+    review.body.css(".p1 .s1").each do |p|
+      puts p.text
+      puts ""
+    end
+  end
+
   def print_details(review)
     puts "---------------------------------"
     puts "#{review.title}"
@@ -47,7 +54,7 @@ class TellyReviews::CLI
     puts "Twitter: #{review.author_twitter}"
     puts "---------------------------------"
     puts ""
-    puts "#{review.body}"
+    puts print_paragraphs(review)
     puts ""
     puts "---------------------------------"
   end
