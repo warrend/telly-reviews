@@ -26,8 +26,8 @@ class TellyReviews::CLI
   end
 
   def print_list
-    TellyReviews::Reviews.all.each.with_index(1) do |review, index|
-      puts "#{index}. #{review.body} by #{review.author}"
+    TellyReviews::Review.all.each.with_index(1) do |review, index|
+      puts "#{index}. #{review.title} by #{review.author}"
     end
   end
 
@@ -43,7 +43,7 @@ class TellyReviews::CLI
     puts "#{review.date}"
     puts "Twitter: #{review.author_twitter}"
     puts ""
-    puts review.body
+    puts "#{review.body}"
     puts ""
   end
 end
