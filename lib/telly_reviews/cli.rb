@@ -22,7 +22,7 @@ class TellyReviews::CLI
       puts ""
       start
     else
-      puts "Please come back soon for the updated reviews!"
+      puts "Please come back soon for more updated reviews!"
       exit
     end
   end
@@ -46,12 +46,8 @@ class TellyReviews::CLI
     puts "#{review.date}"
     puts "Twitter: #{review.author_twitter}"
     puts "---------------------------------"
-    
-    review.body.each do |p|
-      puts p.css(".p1 .s1").text
-      puts "\n"
-    end
-
+    puts ""
+    puts "#{review.body}"
     puts ""
     puts "---------------------------------"
   end

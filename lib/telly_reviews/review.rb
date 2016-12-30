@@ -1,5 +1,5 @@
 class TellyReviews::Review 
-  attr_accessor :title, :author, :date, :body, :author_twitter, :url, :tag
+  attr_accessor :title, :author, :date, :body, :author_twitter, :url
 
   @@all = []
 
@@ -19,9 +19,7 @@ class TellyReviews::Review
 
     @date = doc.css(".article-body .abstract .timestamp").text
     @author_twitter = doc.css(".byline .author .url a").text
-    @tag = doc.css(".abstract h2").text
-
-    @body = doc.css(".article-body .variety-content-wrapper")
+    @body = doc.css(".article-body .variety-content-wrapper").text.strip
   end
 
   def self.find(index)
