@@ -32,6 +32,11 @@ class TellyReviews::CLI
   end
 
   def print_review(review)
+    review.review_details
+    print_details(review)
+  end
+
+  def print_details(review)
     puts "#{review.title}"
     puts ""
     puts "By #{review.author}"
