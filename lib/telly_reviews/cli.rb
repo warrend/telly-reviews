@@ -9,7 +9,10 @@ class TellyReviews::CLI
   end
 
   def start 
+    puts ""
     print_list
+    puts "---------------------------------"
+    puts ""
     puts "Enter number to see article:"
     input = gets.strip
 
@@ -38,13 +41,6 @@ class TellyReviews::CLI
     print_details(review)
   end
 
-  def print_paragraphs(review)
-    review.body.css(".p1 .s1").each do |p|
-      puts "#{p}"
-      puts ""
-    end
-  end
-
   def print_details(review)
     puts "---------------------------------"
     puts "#{review.title}"
@@ -54,8 +50,7 @@ class TellyReviews::CLI
     puts "Twitter: #{review.author_twitter}"
     puts "---------------------------------"
     puts ""
-    puts "#{print_paragraphs(review)}".gsub("0","")
+    puts "#{review.body}"
     puts "---------------------------------"
-    binding.pry
   end
 end
