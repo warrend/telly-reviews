@@ -5,7 +5,8 @@ Gem::Specification.new do |spec|
   spec.version       = TellyReviews::VERSION
   spec.authors       = ["Daniel Warren"]
   spec.email         = ["warrend555@gmail.com"]
-  spec.files         = ["lib/telly_reviews.rb", "lib/telly_reviews/cli.rb", "lib/telly_reviews/scraper.rb", "lib/telly_reviews/review.rb", "config/environment.rb"]
+  #spec.files         = ["lib/telly_reviews.rb", "lib/telly_reviews/cli.rb", "lib/telly_reviews/scraper.rb", "lib/telly_reviews/review.rb", "config/environment.rb"]
+  spec.files         = spec.files.grep(%r{^bin/}) { |f| f[3..-1] }
   spec.summary       = %q{Telly Reviews is a CLI gem that scrapes the latest TV show reviews from Variety.com.}
   spec.homepage      = "https://github.com/warrend/telly-reviews"
   spec.license       = "MIT"
