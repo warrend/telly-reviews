@@ -1,6 +1,6 @@
 # Telly Reviews
 
-Telly Reviews is a CLI gem that scrapes TV show reviews from Variety.com.
+Telly Reviews is a CLI gem that scrapes the latest TV show reviews from Variety.com.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Once run, you will be presented with a list of the latest TV show reviews. Select which one you'd like to read. You can also type 'open' to open an article in your web browser.
+When run, you will be presented with a list of the latest TV show reviews. Select which one you'd like to read. You can also type 'open' to open an article in your web browser.
 
 ## Development
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/telly_reviews. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/warrend/telly_reviews. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
