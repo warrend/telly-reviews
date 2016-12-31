@@ -1,8 +1,6 @@
-# TellyReviews
+# Telly Reviews
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/telly_reviews`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Telly Reviews is a CLI gem that scrapes TV show reviews from Variety.com.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once run, you will be presented with a list of the latest TV show reviews. Select which one you'd like to read. You can also type 'open' to open an article in your web browser.
 
 ## Development
 
