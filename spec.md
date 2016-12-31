@@ -16,5 +16,5 @@ including the body, twitter name, and date.
 
 - [x] Implement both list and detail views
 
-The make_list method pulls data for the list (title of article and author). The detailed view, as
+The make_list method pulls data for the list (title of article, author, and url). The detailed view, as
 stated above, pulls additional data using the review_details method.
