@@ -19,7 +19,7 @@ class TellyReviews::Review
 
     @date = doc.css(".article-body .abstract .timestamp").text
     @author_twitter = doc.css(".byline .author .url a").text
-    @body = doc.css(".article-body .variety-content-wrapper")
+    @body = doc.css(".article-body .variety-content-wrapper").text.strip
   end
 
   def self.find(index)

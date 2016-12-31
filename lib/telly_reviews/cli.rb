@@ -19,10 +19,14 @@ class TellyReviews::CLI
     review = TellyReviews::Review.find(input.to_i)
     print_review(review)
     puts ""
+    puts "Type 'open' to open this article in your web browser."
     puts "Would you like to read another review? (y/n)"
     input = gets.strip.downcase
     if input == 'y'
       puts ""
+      start
+    elsif input == 'open'
+      system("open", "#{review.url}")
       start
     else
       puts "Please come back soon for more updated reviews!"
