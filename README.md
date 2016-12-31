@@ -20,6 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
+Run by using 
+
+    $ telly-reviews
+
 When run, you will be presented with a list of the latest TV show reviews. Select which one you'd like to read. You can also type 'open' to open an article in your web browser.
 
 ## Development
