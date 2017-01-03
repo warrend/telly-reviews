@@ -9,4 +9,12 @@ class TellyReviews::Scraper
       })
     end
   end
+
+  def self.scrape_details(review)
+    doc = Nokogiri::HTML(open(review.url))
+
+    review.date = doc.css(".article-body .abstract .timestamp").text
+    review.author_twitter = doc.css(".byline .author .url a").text
+    review.body = doc.css(".article-body .variety-content-wrapper").text.strip
+  end
 end

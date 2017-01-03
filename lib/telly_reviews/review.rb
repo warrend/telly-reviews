@@ -14,16 +14,16 @@ class TellyReviews::Review
     @@all    
   end
 
-  def review_details
-    doc = Nokogiri::HTML(open(self.url))
-
-    @date = doc.css(".article-body .abstract .timestamp").text
-    @author_twitter = doc.css(".byline .author .url a").text
-    @body = doc.css(".article-body .variety-content-wrapper").text.strip
-  end
-
   def self.find(index)
     self.all[index-1]
+  end
+
+  def self.review_count
+    @@all.count
+  end
+
+  def body_length
+    @body.length
   end
 
 end

@@ -1,11 +1,15 @@
 class TellyReviews::CLI
 
   def call
+    welcome
+    TellyReviews::Scraper.make_list
+    start
+  end
+
+  def welcome
     puts ""
     puts "Welcome to Telly Reviews"
     puts "---------------------------------"
-    TellyReviews::Scraper.make_list
-    start
   end
 
   def start 
@@ -17,6 +21,7 @@ class TellyReviews::CLI
     input = gets.strip
 
     review = TellyReviews::Review.find(input.to_i)
+
     print_review(review)
     puts ""
     puts "Type 'open' to open this article in your web browser."
@@ -41,7 +46,8 @@ class TellyReviews::CLI
   end
 
   def print_review(review)
-    review.review_details
+    TellyReviews::Scraper.scrape_details(review)
+    binding.pry
     print_details(review)
   end
 
